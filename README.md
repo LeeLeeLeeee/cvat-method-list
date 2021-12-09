@@ -4,5 +4,6 @@
 
 ### 실행
 ```bash
+  npm install
   npm start
 ```
