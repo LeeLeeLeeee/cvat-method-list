@@ -1,0 +1,45 @@
+logger-storage.js.md
+variable PluginRegistry
+variable serverProxy
+variable logFactory
+variable ArgumentError
+variable LogType
+variable WORKING_TIME_THRESHOLD
+function sleep
+class LoggerStorage
+	constructor constructor
+		method ignore
+		method ignore
+		property lastLog
+		property lastLog
+		property timeThreshold
+	method configure
+		variable result
+	method log
+		variable result
+	method save
+		variable result
+	method updateWorkingTime
+		variable diff
+		variable lastLogTime
+function implementation
+	function isActiveChecker
+function implementation
+	property <unknown>
+	property payload
+	function catch() callback
+	variable ignoreRule
+	variable lastLog
+	variable log
+		property logPayload
+	variable logPayload
+		property payload
+	variable pushEvent
+function implementation
+	variable collectionToSend
+	function collectionToSend.map() callback
+	variable lastLog
+	variable logPayload
+	variable rule
+	variable userActivityLog
+variable <unknown>

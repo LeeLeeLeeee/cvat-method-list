@@ -1,0 +1,90 @@
+issue.js.md
+variable quickhull
+variable PluginRegistry
+variable Comment
+variable User
+variable ArgumentError
+variable negativeIDGenerator
+variable serverProxy
+class Issue
+	constructor constructor
+		property __internal
+			method get
+		property comments
+			method get
+				function data.comment_set.filter() callback
+		property createdDate
+			method get
+		variable data
+			property comment_set
+			property created_date
+			property frame
+			property id
+			property owner
+			property position
+			property removed
+			property resolved_date
+			property resolver
+		function data.comment_set.map() callback
+		property frame
+			method get
+		property id
+			method get
+		property owner
+			method get
+		property position
+			method get
+			method set
+				function value.some() callback
+		variable property
+		property removed
+			method get
+			method set
+		property resolvedDate
+			method get
+		property resolver
+			method get
+	method comment
+		variable result
+	method hull
+		function map() callback
+		variable points
+			function coordinates.reduce() callback
+				property x
+				property y
+	method reopen
+		variable result
+	method resolve
+		variable result
+	method serialize
+		variable comments
+		variable data
+			property comment_set
+				function comments.map() callback
+			property frame
+			property position
+	method toJSON
+		property updated
+		property comment_set
+			function comments.map() callback
+		variable data
+		variable owner
+		property owner_id
+		variable resolver
+		property resolver_id
+		variable updated
+function implementation
+	variable comment
+	variable id
+	variable jsonified
+	variable response
+	variable savedComment
+function implementation
+	variable id
+	variable response
+		property resolver_id
+function implementation
+	variable id
+	variable response
+		property resolver_id
+variable <unknown>

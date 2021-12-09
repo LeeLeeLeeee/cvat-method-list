@@ -1,0 +1,68 @@
+groupHandler.ts.md
+interface GroupHandler
+	method cancel
+	method group
+	method resetSelectedObjects
+	method select
+class GroupHandlerImpl
+	constructor constructor
+		property x
+		property y
+	property bindedOnSelectStart
+	property bindedOnSelectStop
+	property bindedOnSelectUpdate
+	method cancel
+	property canvas
+	method closeGrouping
+		variable statesToBeGroupped
+	method getSelectionBox
+		variable point
+		variable stopSelectionPoint
+			property x
+			property y
+		property xbr
+		property xtl
+		property ybr
+		property ytl
+	property getStates
+	method group
+	property highlightedShapes
+	method initGrouping
+	property initialized
+	property onFindObject
+	property onGroupDone
+	method onSelectStart
+		property <unknown>
+		variable point
+		property x
+		property y
+	method onSelectStop
+		variable bbox
+		variable box
+		variable clientID
+		variable objectState
+			function filter() callback
+		variable shape
+		variable shapes
+			function members.filter() callback
+	method onSelectUpdate
+		variable box
+		property height
+		property width
+		property x
+		property y
+	method release
+		property x
+		property y
+	method resetSelectedObjects
+		variable shape
+		variable state
+	method select
+		variable includes
+		variable shape
+		variable shape
+		variable stateIndexes
+			function statesToBeGroupped.map() callback
+	property selectionRect
+	property startSelectionPoint
+	property statesToBeGroupped

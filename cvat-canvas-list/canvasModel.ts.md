@@ -1,0 +1,303 @@
+canvasModel.ts.md
+interface Size
+	property height
+	property width
+interface Image
+	property imageData
+	property renderHeight
+	property renderWidth
+interface Position
+	property x
+	property y
+interface Geometry
+	property angle
+	property canvas
+	property grid
+	property image
+	property left
+	property offset
+	property scale
+	property top
+interface FocusData
+	property clientID
+	property padding
+interface ActiveElement
+	property attributeID
+	property clientID
+enum RectDrawingMethod
+	variable CLASSIC
+	variable EXTREME_POINTS
+enum CuboidDrawingMethod
+	variable CLASSIC
+	variable CORNER_POINTS
+interface Configuration
+	property autoborders
+	property creationOpacity
+	property displayAllText
+	property forceDisableEditing
+	property forceFrameUpdate
+	property intelligentPolygonCrop
+	property showProjections
+	property undefinedAttrValue
+interface DrawData
+	property crosshair
+	property cuboidDrawingMethod
+	property enabled
+	property initialState
+	property numberOfPoints
+	property rectDrawingMethod
+	property redraw
+	property shapeType
+interface InteractionData
+	property allowRemoveOnlyLast
+	property crosshair
+	property enabled
+	property enableSliding
+	property enableThreshold
+	property intermediateShape
+	property minNegVertices
+	property minPosVertices
+	property onChangeToolsBlockerState
+	property shapeType
+	property startWithBox
+interface InteractionResult
+	property button
+	property points
+	property shapeType
+interface EditData
+	property enabled
+	property pointID
+	property state
+interface GroupData
+	property enabled
+interface MergeData
+	property enabled
+interface SplitData
+	property enabled
+enum FrameZoom
+	variable MAX
+	variable MIN
+enum UpdateReasons
+	variable BITMAP
+	variable CANCEL
+	variable CONFIG_UPDATED
+	variable DATA_FAILED
+	variable DRAG_CANVAS
+	variable DRAW
+	variable FITTED_CANVAS
+	variable GRID_UPDATED
+	variable GROUP
+	variable IMAGE_CHANGED
+	variable IMAGE_FITTED
+	variable IMAGE_MOVED
+	variable IMAGE_ZOOMED
+	variable INTERACT
+	variable ISSUE_REGIONS_UPDATED
+	variable MERGE
+	variable OBJECTS_UPDATED
+	variable SELECT
+	variable SELECT_REGION
+	variable SHAPE_ACTIVATED
+	variable SHAPE_FOCUSED
+	variable SPLIT
+	variable ZOOM_CANVAS
+enum Mode
+	variable DRAG
+	variable DRAG_CANVAS
+	variable DRAW
+	variable EDIT
+	variable GROUP
+	variable IDLE
+	variable INTERACT
+	variable MERGE
+	variable RESIZE
+	variable SELECT_REGION
+	variable SPLIT
+	variable ZOOM_CANVAS
+interface CanvasModel
+	method activate
+	property activeElement
+	method bitmap
+	method cancel
+	property configuration
+	method configure
+	method dragCanvas
+	method draw
+	property drawData
+	property exception
+	method fit
+	method fitCanvas
+	method focus
+	property focusData
+	property geometry
+	method grid
+	property gridSize
+	method group
+	property groupData
+	property image
+	property imageBitmap
+	method interact
+	property interactionData
+	method isAbleToChangeFrame
+	property issueRegions
+	method merge
+	property mergeData
+	property mode
+	method move
+	property objects
+	method rotate
+	method select
+	property selected
+	method selectRegion
+	method setup
+	method setupIssueRegions
+	method split
+	property splitData
+	property zLayer
+	method zoom
+	method zoomCanvas
+class CanvasModelImpl
+	constructor constructor
+		property activeElement
+			property attributeID
+			property clientID
+		property angle
+		property canvasSize
+			property height
+			property width
+		property configuration
+			property autoborders
+			property displayAllText
+			property undefinedAttrValue
+		property drawData
+			property enabled
+			property initialState
+		property exception
+		property focusData
+			property clientID
+			property padding
+		property gridSize
+			property height
+			property width
+		property groupData
+			property enabled
+		property image
+		property imageBitmap
+		property imageID
+		property imageOffset
+		property imageSize
+			property height
+			property width
+		property interactionData
+			property enabled
+		property issueRegions
+		property left
+		property mergeData
+			property enabled
+		property mode
+		property objects
+		property scale
+		property selected
+		property splitData
+			property enabled
+		property top
+		property zLayer
+	method activate
+		property attributeID
+		property clientID
+		variable state
+	property (get) activeElement
+		property <unknown>
+	method bitmap
+	method cancel
+	property (get) configuration
+		property <unknown>
+	method configure
+	property data
+	method dragCanvas
+	method draw
+		property drawData
+		property drawData
+		variable clientID
+		variable state
+	property (get) drawData
+		property <unknown>
+	property (get) exception
+	method fit
+		variable angle
+	method fitCanvas
+	method focus
+		property clientID
+		property padding
+	property (get) focusData
+		property <unknown>
+	property (get) geometry
+		property angle
+		property canvas
+			property <unknown>
+		property grid
+			property <unknown>
+		property image
+			property <unknown>
+		property left
+		property offset
+		property scale
+		property top
+	property (set) geometry
+		property <unknown>
+		property <unknown>
+		property <unknown>
+	method grid
+		property height
+		property width
+	property (get) gridSize
+		property <unknown>
+	method group
+		property groupData
+	property (get) groupData
+		property <unknown>
+	property (get) image
+	property (get) imageBitmap
+	method interact
+		variable thresholdChanged
+	property (get) interactionData
+		property <unknown>
+	method isAbleToChangeFrame
+		variable isUnable
+	property (get) issueRegions
+		property <unknown>
+	method merge
+		property mergeData
+	property (get) mergeData
+		property <unknown>
+	property (get) mode
+	property (set) mode
+	method move
+	property (get) objects
+		function data.objects.filter() callback
+	method rotate
+	method select
+	property (get) selected
+	method selectRegion
+	method setup
+		function catch() callback
+		function frameData.data() callback
+		function then() callback
+			property height
+			property width
+	method setupIssueRegions
+	method split
+		property splitData
+	property (get) splitData
+		property <unknown>
+	property (get) zLayer
+	method zoom
+		variable angle
+		variable leftMultiplier
+		variable leftMultiplier
+		variable mutiplier
+		variable newScale
+		variable oldScale
+		variable topMultiplier
+		variable topMultiplier
+	method zoomCanvas

@@ -1,0 +1,329 @@
+drawHandler.ts.md
+interface DrawHandler
+	method cancel
+	method configurate
+	method draw
+	method transform
+interface FinalCoordinates
+	property box
+	property points
+class DrawHandlerImpl
+	constructor constructor
+		function canvas.on('mousemove.crosshair') callback
+			variable x
+			property x
+			variable y
+			property y
+		property x
+		property y
+	method addCrosshair
+		variable x
+		variable y
+	property autoborderHandler
+	property autobordersEnabled
+	method cancel
+	property canceled
+	property canvas
+	method configurate
+		variable isFilalblePolygon
+		variable isFillableCuboid
+		variable isFillableRect
+		property opacity
+	property configuration
+	property crosshair
+	property cursorPosition
+	method draw
+	method drawBox
+		function drawInstance.on('drawstop') callback
+			variable bbox
+			variable clientID
+			property clientID
+			property points
+			variable shapeType
+			property shapeType
+			variable xbr
+			variable xtl
+			variable ybr
+			variable ytl
+		property 'fill-opacity'
+		function on('drawupdate') callback
+		property 'stroke-width'
+	method drawBoxBy4Points
+		variable numberOfPoints
+		function on('drawpoint') callback
+			variable bbox
+			variable clientID
+			property clientID
+			property points
+			variable shapeType
+			property shapeType
+			variable xbr
+			variable xtl
+			variable ybr
+			variable ytl
+		function on('drawstart') callback
+		function on('undopoint') callback
+		property opacity
+		property 'stroke-width'
+	method drawCuboid
+		function drawInstance.on('drawstop') callback
+			variable bbox
+			variable clientID
+			property clientID
+			variable d
+				property x
+				property y
+			property points
+			variable shapeType
+			property shapeType
+			variable xbr
+			variable xtl
+			variable ybr
+			variable ytl
+		property 'fill-opacity'
+		function on('drawupdate') callback
+		property 'stroke-width'
+	method drawCuboidBy4Points
+		property 'stroke-width'
+	property drawData
+	property drawInstance
+	method drawPoints
+		property opacity
+		property 'stroke-width'
+	method drawPolygon
+		property 'fill-opacity'
+		property 'stroke-width'
+	method drawPolyline
+		property 'fill-opacity'
+		property 'stroke-width'
+	method drawPolyshape
+		function canvas.on('mousedown.draw') callback
+		function canvas.on('mousemove.draw') callback
+			variable delta
+			variable deltaThreshold
+			variable dx
+			variable dy
+		function drawInstance.on('drawdone') callback
+			variable box
+			variable clientID
+			property clientID
+			property clientID
+			property clientID
+			property clientID
+			variable points
+			property points
+			property points
+			property points
+			property points
+			variable shapeType
+			property shapeType
+			property shapeType
+			property shapeType
+			property shapeType
+			variable targetPoints
+		function drawInstance.on('drawstart drawpoint') callback
+		function drawInstance.on('drawupdate') callback
+		function drawInstance.on('undopoint') callback
+		variable lastDrawnPoint
+			property x
+			property y
+		variable size
+		variable sizeDecrement
+			function setTimeout() callback
+	property geometry
+	method getFinalCuboidCoordinates
+		variable box
+			property xbr
+			property xtl
+			property ybr
+			property ytl
+		property box
+		variable cuboidOffsets
+		function cuboidOffsets.forEach() callback
+			variable dx
+			variable dy
+		variable frameHeight
+		variable frameWidth
+		variable i
+		variable minCuboidOffset
+			property d
+			property dx
+			property dy
+		variable offset
+		variable points
+		property points
+			function points.map() callback
+		function points.forEach() callback
+		function points.map() callback
+		variable x
+		variable xOffset
+		variable y
+		variable yOffset
+	method getFinalPolyshapeCoordinates
+		variable box
+			property xbr
+			property xtl
+			property ybr
+			property ytl
+		property box
+		variable crop
+			variable curPoint
+				property x
+				property y
+			variable i
+			variable intersectionPoints
+			variable isLastPoint
+			variable isPolygon
+			variable isPolyline
+			variable nextPoint
+				property x
+				property x
+				property y
+				property y
+			variable resultPoints
+		enum Direction
+			variable Horizontal
+			variable Vertical
+		variable findInersection
+			variable intersectionPoint
+		variable findIntersectionsWithFrameBorders
+			variable bottomLine
+				property x
+				property x
+				property y
+				property y
+			variable leftLine
+				property x
+				property x
+				property y
+				property y
+			variable resultPoints
+			variable rightLine
+				property x
+				property x
+				property y
+				property y
+			variable topLine
+				property x
+				property x
+				property y
+				property y
+		variable frameHeight
+		variable frameWidth
+		variable i
+		function isBetween
+		variable isInsideFrame
+		variable offset
+		variable points
+			function targetPoints.map() callback
+		property points
+	method getFinalRectCoordinates
+		variable frameHeight
+		variable frameWidth
+		variable offset
+		variable xbr
+		variable xtl
+		variable ybr
+		variable ytl
+	method initDrawing
+	property initialized
+	property onDrawDone
+	method pasteBox
+		function drawInstance.on('done') callback
+			property attributes
+				property <unknown>
+			variable bbox
+			property color
+			property label
+			property objectType
+			property occluded
+			property points
+			property shapeType
+			variable xbr
+			variable xtl
+			variable ybr
+			variable ytl
+		property 'fill-opacity'
+		property 'stroke-width'
+	method pasteCuboid
+		property 'face-stroke'
+		property 'fill-opacity'
+		property 'stroke-width'
+	method pastePoints
+		function canvas.on('mousemove.draw') callback
+			variable x
+			variable y
+		variable initialX
+		variable initialY
+		function moveShape
+			variable bbox
+			function forEach() callback
+				variable px
+				variable py
+			variable points
+			variable radius
+		variable numOfPoints
+		property r
+		variable radius
+		variable stroke
+		property 'stroke-width'
+		property 'stroke-width'
+	method pastePolygon
+		property 'fill-opacity'
+		property 'stroke-width'
+	method pastePolyline
+		property 'stroke-width'
+	method pastePolyshape
+		function drawInstance.on('done') callback
+			property attributes
+				property <unknown>
+			property color
+			property label
+			property objectType
+			property occluded
+			variable points
+			property points
+			property shapeType
+			variable targetPoints
+				function map() callback
+	method pasteShape
+		function canvas.on('mousemove.draw') callback
+			variable x
+			variable y
+		variable initialX
+		variable initialY
+		function moveShape
+			variable bbox
+	property pointsGroup
+	method release
+	method removeCrosshair
+	method setupDrawEvents
+		function canvas.on('mousedown.draw') callback
+			property snapToGrid
+		variable initialized
+	method setupPasteEvents
+		function canvas.on('mousedown.draw') callback
+			property originalEvent
+	property shapeSizeElement
+	method startDraw
+		property height
+		variable offset
+		variable points
+			function drawData.initialState.points.map() callback
+		variable stringifiedPoints
+		property width
+		property x
+		variable xbr
+		variable xtl
+		property y
+		variable ybr
+		variable ytl
+	property startTimestamp
+	property text
+	method transform
+		variable paintHandler
+		variable point
+		variable point
+		property r
+		property 'stroke-width'
+		property 'stroke-width'

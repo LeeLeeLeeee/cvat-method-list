@@ -1,0 +1,47 @@
+zoomHandler.ts.md
+interface ZoomHandler
+	method cancel
+	method transform
+	method zoom
+class ZoomHandlerImpl
+	constructor constructor
+		property x
+		property y
+	property bindedOnSelectStart
+	property bindedOnSelectStop
+	property bindedOnSelectUpdate
+	method cancel
+	property canvas
+	property geometry
+	method getSelectionBox
+		property height
+		variable point
+		variable stopSelectionPoint
+			property x
+			property y
+		property width
+		property x
+		variable xbr
+		variable xtl
+		property y
+		variable ybr
+		variable ytl
+	method onSelectStart
+		property <unknown>
+		variable point
+		property 'stroke-width'
+		property x
+		property y
+	method onSelectStop
+		variable box
+		variable threshold
+		property x
+		property y
+	method onSelectUpdate
+		property <unknown>
+	property onZoomRegion
+	property selectionRect
+	property startSelectionPoint
+	method transform
+		property 'stroke-width'
+	method zoom

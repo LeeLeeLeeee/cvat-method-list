@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method-list</title>
+</head>
+<style>
+
+    #file-struct-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow-y: scroll;
+    }
+
+    #file-struct-box {
+        position: absolute;
+
+    }
+
+    #file-struct-box ol {
+        list-style: none;
+        padding-left: 0px;
+    }
+
+    #file-struct-box li {
+        cursor: pointer;
+        display: inline-block;
+        width: 40%;
+    }
+
+    .interface, .class {
+        color: green;
+    }
+
+    .method, .function {
+        color: #5454ff
+    }
+
+    .property, .variable, .enum {
+        color: #ff4e4e;
+    }
+</style>
+<body style="height: 100%;display:flex;flex-direction: column;">
+    <header class="py-3 mb-3 border-bottom">
+        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+          <div class="h3 text-center">Method-list</div>
+          <div class="d-flex align-items-center">
+
+          </div>
+        </div>
+      </header>
+      <div class="h-100 container-fluid pb-3">
+        <div class="h-100 d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+          <div id="file-struct-wrapper" class="bg-light border rounded-3">
+            <div id="file-struct-box" class=" p-1"></div>
+          </div>
+          <div class="bg-light border rounded-3" style="overflow-y: scroll;">
+            <div id="diagram-box" class="p-3" >
+
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    // variable, interface, method, property, constructor => 제외
+    const symbol_regexp = /(variable|interface|method|property|class|function|enum)/
+
+    $(document).ready(() => {
+        let fileData = undefined;
+        const create_file_struct = () => {
+            let file_struct_content = ''
+            for(const folder_name in fileData) {
+                file_struct_content += `<ul><li><b>${folder_name}</b></li><ol class='border-start border-secondary border-2'>`
+                for(const file_name in fileData[folder_name]) {
+                    file_struct_content += `<li data-folder='${folder_name}' data-file='${file_name}' class='file-list m-1 p-1 bg-white border rounded'>${file_name.replace(/\.md/g, '')}</li>`
+                }
+                file_struct_content += `</ol></ul>`
+            }
+            $('#file-struct-box').append(file_struct_content)
+        }
+
+        // const data_to_dictionary = (data) => {
+        //     let line_dict = {};
+        //     const lines = data.split('\n').slice(1);
+        //     const clear_tab_in_line = (line) => line.replace(/\t/g, '')
+
+        //     let level = 0;
+        //     let skip_level = 100;
+        //     for(let line of lines) {
+        //         const matched_tab = line.match(/\t/g);
+        //         level = !!matched_tab ? matched_tab.length : 0;
+
+        //         line = clear_tab_in_line(line);
+        //         const matchItem = symbol_regexp.exec(line);
+
+        //         if(matchItem === null) continue;
+
+        //         if(skip_level < level) {
+        //             continue;
+        //         } else {
+        //             skip_level = 100;
+        //         }
+
+        //         if(matchItem[0] === 'function') {
+        //             skip_level = level;
+        //             continue;
+        //         }
+
+        //         let symbol_data = { type: matchItem[0], value: matchItem.input.slice(matchItem[0].length + 1)}
+        //         if(level > 0) {
+        //             symbol_data.included = (line_dict[level - 1].length - 1)
+        //         }
+        //         if(line_dict[level] === undefined) line_dict[level] = [];
+
+        //         line_dict[level].push(symbol_data);
+        //     }
+        //     return line_dict;
+        // }
+
+        // const dictionary_to_diagram = (diagram) => {
+
+        // }
+
+        $.get('/read').then((data) => {
+            fileData = data;
+            create_file_struct();
+        })
+
+        $('body').on('click','ul .file-list', (e) => {
+            const file_name = e.target.getAttribute('data-file');
+            const folder_name = e.target.getAttribute('data-folder');
+            const data = fileData[folder_name][file_name]
+            const new_content = data.split('\n').slice(1).map((line) => {
+                const matchItem = symbol_regexp.exec(line);
+                if(matchItem === null) return null;
+                const className = matchItem[0]
+                return `<div class='${className}'>${line}</div>`
+            }).join('\n')
+            $('#diagram-box').html('');
+            $('#diagram-box').append(`<pre style='line-height:1'>${new_content}</pre>`)
+        })
+    })
+</script>
+</html>

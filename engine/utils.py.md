@@ -1,0 +1,44 @@
+utils.py.md
+variable Import
+function parse_imports
+	variable source_code
+	variable root
+	variable node
+	variable module
+	variable n
+function import_modules
+	variable source_code
+	variable results
+	variable imports
+	variable import_
+	variable module
+	variable loaded_module
+class InterpreterError
+function execute_python_code
+	variable source_code
+	variable global_vars
+	variable local_vars
+	variable err
+	variable error_class
+	variable details
+	variable line_number
+	variable tb
+function av_scan_paths
+	variable paths
+	variable command
+	variable res
+function rotate_image
+	variable image
+	variable angle
+	variable height
+	variable width
+	variable image_center
+	variable matrix
+	variable abs_cos
+	variable abs_sin
+	variable bound_w
+	variable bound_h
+function md5_hash
+	variable frame
+function parse_specific_attributes
+	variable specific_attributes

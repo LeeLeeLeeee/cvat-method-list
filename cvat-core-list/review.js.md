@@ -1,0 +1,101 @@
+review.js.md
+variable store
+variable PluginRegistry
+variable Issue
+variable User
+variable ArgumentError
+variable DataError
+variable ReviewStatus
+variable negativeIDGenerator
+variable serverProxy
+class Review
+	constructor constructor
+		property __internal
+			method get
+		property assignee
+			method get
+		variable data
+			property assignee
+			property estimated_quality
+			property id
+			property issue_set
+			property job
+			property reviewed_frames
+			property reviewed_states
+			property reviewer
+			property status
+		function data.issue_set.map() callback
+		property estimatedQuality
+			method get
+			method set
+		property id
+			method get
+		property issues
+			method get
+				function data.issue_set.filter() callback
+		property job
+			method get
+		variable property
+		property reviewedFrames
+			method get
+		property reviewedStates
+			method get
+		property reviewer
+			method get
+			method set
+		property status
+			method get
+			method set
+				variable type
+				variable value
+				variable valueInEnum
+	method openIssue
+		variable result
+	method reviewFrame
+		variable result
+	method reviewStates
+		variable result
+	method serialize
+		variable data
+			property issue_set
+				function issues.map() callback
+			property job
+			property reviewed_frames
+			property reviewed_states
+		variable issues
+		variable reviewedFrames
+		variable reviewedStates
+	method submit
+		variable result
+	method toJSON
+		property updated
+		variable assignee
+		property assignee_id
+		variable data
+		property issue_set
+			function issues.map() callback
+		variable reviewedFrames
+		variable reviewedStates
+		variable reviewer
+		property reviewer_id
+		variable updated
+	method toLocalStorage
+		variable data
+function implementation
+function implementation
+	function stateIDs.forEach() callback
+	function stateIDs.some() callback
+function implementation
+	variable comment
+	variable copied
+		property comment_set
+		property frame
+		property owner
+		property position
+	function data.position.some() callback
+	variable issue
+function implementation
+	variable data
+	variable response
+	function response.issue_set.map() callback
+variable <unknown>

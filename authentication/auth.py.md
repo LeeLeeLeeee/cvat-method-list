@@ -1,0 +1,200 @@
+auth.py.md
+class TokenAuthentication
+	method authenticate
+		variable request
+		variable auth
+		variable session
+function register_signals
+	function create_groups
+		variable sender
+		variable kwargs
+		variable role
+		variable db_group
+class SignatureAuthentication
+	method authenticate
+		variable request
+		variable signer
+		variable sign
+		variable user
+variable has_admin_role
+variable has_user_role
+variable has_annotator_role
+variable has_observer_role
+function is_project_owner
+	variable db_user
+	variable db_project
+function is_project_assignee
+	variable db_user
+	variable db_project
+function is_project_annotator
+	variable db_user
+	variable db_project
+	variable db_tasks
+function is_project_reviewer
+	variable db_user
+	variable db_project
+	variable db_tasks
+function is_task_owner
+	variable db_user
+	variable db_task
+function is_task_assignee
+	variable db_user
+	variable db_task
+function is_task_reviewer
+	variable db_user
+	variable db_task
+	variable db_segments
+function is_task_annotator
+	variable db_user
+	variable db_task
+	variable db_segments
+function is_job_owner
+	variable db_user
+	variable db_job
+function is_job_annotator
+	variable db_user
+	variable db_job
+	variable db_task
+	variable has_rights
+function has_change_permissions
+	variable db_user
+	variable db_job
+	variable db_task
+	variable has_rights
+function is_job_reviewer
+	variable db_user
+	variable db_job
+	variable has_rights
+function is_issue_owner
+	variable db_user
+	variable db_issue
+	variable has_rights
+function is_comment_author
+	variable db_user
+	variable db_comment
+	variable has_rights
+function is_cloud_storage_owner
+	variable db_user
+	variable db_storage
+class AdminRolePermission
+	method has_permission
+		variable request
+		variable view
+class UserRolePermission
+	method has_permission
+		variable request
+		variable view
+class AnnotatorRolePermission
+	method has_permission
+		variable request
+		variable view
+class ObserverRolePermission
+	method has_permission
+		variable request
+		variable view
+class ProjectCreatePermission
+	method has_permission
+		variable request
+		variable view
+class ProjectAccessPermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class ProjectChangePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class ProjectDeletePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class TaskCreatePermission
+	method has_permission
+		variable request
+		variable view
+class TaskAccessPermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class ProjectGetQuerySetMixin
+	method get_queryset
+		variable queryset
+		variable user
+function filter_task_queryset
+	variable queryset
+	variable user
+	variable query_filter
+class TaskGetQuerySetMixin
+	method get_queryset
+		variable queryset
+		variable user
+class TaskChangePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class TaskDeletePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class JobAccessPermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class JobChangePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class JobReviewPermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class IssueAccessPermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+		variable db_job
+class IssueDestroyPermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class IssueChangePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+		variable db_job
+class CommentCreatePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class CommentChangePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class CloudStorageAccessPermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class CloudStorageChangePermission
+	method has_object_permission
+		variable request
+		variable view
+		variable obj
+class CloudStorageGetQuerySetMixin
+	method get_queryset
+		variable queryset
+		variable user

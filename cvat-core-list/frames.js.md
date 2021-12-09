@@ -1,0 +1,226 @@
+frames.js.md
+function <function>
+	variable <unknown>
+		property clear
+		property FrameData
+		property getContextImage
+		property getFrame
+		property getPreview
+		property getRanges
+	variable ArgumentError
+	function clear
+	variable cvatData
+	variable DataError
+	variable Exception
+	class FrameBuffer
+		constructor constructor
+		method addContextImage
+		method cachedFrames
+			function map() callback
+		method clear
+			variable chunkIdx
+		method fillBuffer
+			function <function>
+				property <unknown>
+				property <unknown>
+				variable chunkFrames
+				variable chunkIdx
+				variable error
+			property buffer
+			variable bufferedFrames
+			variable chunkIdx
+			variable freeSize
+			variable i
+			property reject
+			variable requestedFrameCount
+			property requestedFrames
+			property resolve
+			variable stopFrame
+		method getContextImage
+		method getFreeBufferSize
+			variable chunk
+			variable requestedFrameCount
+		method isContextImageAvailable
+		method makeFillRequest
+			variable error
+		method requestOneChunkFrames
+			function <function>
+				property <unknown>
+				function catch() callback
+				variable frame
+				variable frameData
+					property frameMeta
+					property decodeForward
+					property frameNumber
+					property startFrame
+					property stopFrame
+					property taskID
+				variable frameMeta
+				property reject
+				variable requestedFrame
+				property resolve
+				function then() callback
+					variable bufferedframes
+						function map() callback
+		method require
+			variable cachedFrames
+			function catch() callback
+			variable frame
+			variable frame
+				property frameMeta
+				property decodeForward
+				property frameNumber
+				property startFrame
+				property stopFrame
+				property taskID
+			variable frameMeta
+			variable maxFrame
+	class FrameData
+		constructor constructor
+			property decodeForward
+				property value
+				property writable
+			property filename
+				property value
+				property writable
+			property hasRelatedContext
+				property value
+				property writable
+			property height
+				property value
+				property writable
+			property number
+				property value
+				property writable
+			property startFrame
+				property value
+				property writable
+			property stopFrame
+				property value
+				property writable
+			property tid
+				property value
+				property writable
+			property width
+				property value
+				property writable
+		method data
+			variable result
+		property (get) imageData
+		property (set) imageData
+	variable frameDataCache
+	function getContextImage
+		variable response
+	function getFrame
+		property activeChunkRequest
+		variable blockType
+		property chunkSize
+		variable decodedBlocksCacheSize
+		property decodedBlocksCacheSize
+		property frameBuffer
+		variable frameMeta
+		variable mean
+			function meta.frames.reduce() callback
+		variable meta
+		property meta
+		property mode
+		property nextChunkRequest
+		property provider
+		property startFrame
+		variable stdDev
+			function meta.frames.map() callback
+			function reduce() callback
+		property stopFrame
+	function getFrameMeta
+		variable meta
+		variable mode
+		variable size
+	function getImageContext
+		function <function>
+			function catch() callback
+			function then() callback
+				function onload
+				variable reader
+	function getPreview
+		function <function>
+			function catch() callback
+			function then() callback
+				function onload
+				variable reader
+	function getRanges
+		property buffered
+		property buffered
+		property decoded
+		property decoded
+	function implementation
+		function <function>
+			function catch() callback
+			variable chunkNumber
+			variable chunkSize
+			variable makeActiveRequest
+				variable activeChunk
+				function catch() callback
+				function finally() callback
+					variable r
+				variable taskDataCache
+				function then() callback
+			variable onDecodeAll
+				variable callback
+				variable callbackArray
+				variable i
+			variable provider
+			variable rejectRequestAll
+				variable r
+			variable resolveWrapper
+				property imageData
+				property renderHeight
+				property renderWidth
+			variable start
+			variable stop
+			function then() callback
+				variable activeRequest
+				variable callbacks
+				property callbacks
+					property frameNumber
+					property reject
+					property resolve
+				property callbacks
+					property frameNumber
+					property reject
+					property resolve
+				property callbacks
+				property chunkNumber
+				property chunkNumber
+				property chunkNumber
+				property completed
+				property completed
+				property completed
+				property frameNumber
+				property frameNumber
+				variable nextChunkNumber
+				variable nextStart
+				variable nextStop
+				property onDecodeAll
+				property onDecodeAll
+				property onDecodeAll
+				variable r
+				property reject
+				property reject
+				property rejectRequestAll
+				property rejectRequestAll
+				property rejectRequestAll
+				property request
+				property request
+				property request
+				property resolve
+				property resolve
+				property start
+				property start
+				property start
+				property stop
+				property stop
+				property stop
+	variable isBrowser
+	variable isNode
+	variable PluginRegistry
+	variable serverProxy

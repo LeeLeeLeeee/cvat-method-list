@@ -1,0 +1,462 @@
+serializers.py.md
+class BasicUserSerializer
+	method validate
+		variable data
+		variable unknown_keys
+		variable message
+	class Meta
+		variable model
+		variable fields
+		variable ordering
+class UserSerializer
+	variable groups
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+		variable write_only_fields
+		variable ordering
+class AttributeSerializer
+	class Meta
+		variable model
+		variable fields
+	method to_internal_value
+		variable data
+		variable attribute
+	method to_representation
+		variable instance
+		variable attribute
+class LabelSerializer
+	variable id
+	variable attributes
+	variable color
+	variable deleted
+	class Meta
+		variable model
+		variable fields
+	method validate
+		variable attrs
+	method update_instance
+		variable validated_data
+		variable parent_instance
+		variable attributes
+		variable instance
+		variable logger
+		variable db_label
+		variable label_names
+		variable attr
+		variable db_attr
+		variable created
+class JobCommitSerializer
+	class Meta
+		variable model
+		variable fields
+class JobSerializer
+	variable task_id
+	variable start_frame
+	variable stop_frame
+	variable assignee
+	variable assignee_id
+	variable reviewer
+	variable reviewer_id
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+class SimpleJobSerializer
+	variable assignee
+	variable assignee_id
+	variable reviewer
+	variable reviewer_id
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+class SegmentSerializer
+	variable jobs
+	class Meta
+		variable model
+		variable fields
+class ClientFileSerializer
+	class Meta
+		variable model
+		variable fields
+	method to_internal_value
+		variable data
+	method to_representation
+		variable instance
+		variable upload_dir
+class ServerFileSerializer
+	class Meta
+		variable model
+		variable fields
+	method to_internal_value
+		variable data
+	method to_representation
+		variable instance
+class RemoteFileSerializer
+	class Meta
+		variable model
+		variable fields
+	method to_internal_value
+		variable data
+	method to_representation
+		variable instance
+class RqStatusSerializer
+	variable state
+	variable message
+class WriteOnceMixin
+	method get_extra_kwargs
+		variable extra_kwargs
+	method _set_write_once_fields
+		variable extra_kwargs
+		variable write_once_fields
+		variable field_name
+		variable kwargs
+class DataSerializer
+	variable image_quality
+	variable use_zip_chunks
+	variable client_files
+	variable server_files
+	variable remote_files
+	variable use_cache
+	variable copy_data
+	variable cloud_storage_id
+	class Meta
+		variable model
+		variable fields
+	method validate_frame_filter
+		variable value
+		variable match
+	method validate_chunk_size
+		variable value
+	method validate
+		variable data
+	method create
+		variable validated_data
+		variable client_files
+		variable server_files
+		variable remote_files
+		variable db_data
+		variable data_path
+		variable f
+		variable client_file
+		variable server_file
+		variable remote_file
+class TaskSerializer
+	variable labels
+	variable segments
+	variable data_chunk_size
+	variable data_compressed_chunk_type
+	variable data_original_chunk_type
+	variable size
+	variable image_quality
+	variable data
+	variable owner
+	variable owner_id
+	variable assignee
+	variable assignee_id
+	variable project_id
+	variable dimension
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+		variable write_once_fields
+		variable ordering
+	method create
+		variable validated_data
+		variable labels
+		variable db_task
+		variable label_names
+		variable label
+		variable attributes
+		variable db_label
+		variable attr
+		variable task_path
+	method to_representation
+		variable instance
+		variable response
+	method update
+		variable instance
+		variable validated_data
+		variable labels
+		variable label
+		variable validated_project_id
+		variable project
+		variable old_label
+		variable new_label
+		variable model
+		variable new_label_for_name
+		variable attr
+		variable attr_name
+	method validate
+		variable attrs
+		variable project_id
+		variable project
+		variable new_label_names
+		variable old_labels
+		variable old_label
+		variable new_labels
+		variable target_project
+		variable target_project_label_names
+		variable label
+		variable label_names
+class ProjectSearchSerializer
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+		variable ordering
+class TrainingProjectSerializer
+	class Meta
+		variable model
+		variable fields
+		variable write_once_fields
+class ProjectWithoutTaskSerializer
+	variable labels
+	variable owner
+	variable owner_id
+	variable assignee
+	variable assignee_id
+	variable task_subsets
+	variable training_project
+	variable dimension
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+		variable ordering
+	method to_representation
+		variable instance
+		variable response
+		variable task_subsets
+class ProjectSerializer
+	variable tasks
+	class Meta
+		variable fields
+	method create
+		variable validated_data
+		variable labels
+		variable training_data
+		variable host
+		variable username
+		variable password
+		variable tr_p
+		variable db_project
+		variable label_names
+		variable label
+		variable attributes
+		variable db_label
+		variable attr
+		variable project_path
+	method update
+		variable instance
+		variable validated_data
+		variable labels
+		variable label
+	method validate_labels
+		variable value
+		variable label_names
+	method to_representation
+		variable instance
+		variable response
+class ExceptionSerializer
+	variable system
+	variable client
+	variable time
+	variable job_id
+	variable task_id
+	variable proj_id
+	variable client_id
+	variable message
+	variable filename
+	variable line
+	variable column
+	variable stack
+class AboutSerializer
+	variable name
+	variable description
+	variable version
+class FrameMetaSerializer
+	variable width
+	variable height
+	variable name
+	variable has_related_context
+class PluginsSerializer
+	constant GIT_INTEGRATION
+	constant ANALYTICS
+	constant MODELS
+	constant PREDICT
+class DataMetaSerializer
+	variable frames
+	variable image_quality
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+class AttributeValSerializer
+	variable spec_id
+	variable value
+	method to_internal_value
+		variable data
+class AnnotationSerializer
+	variable id
+	variable frame
+	variable label_id
+	variable group
+	variable source
+class LabeledImageSerializer
+	variable attributes
+class ShapeSerializer
+	variable type
+	variable occluded
+	variable z_order
+	variable points
+class LabeledShapeSerializer
+	variable attributes
+class TrackedShapeSerializer
+	variable id
+	variable frame
+	variable outside
+	variable attributes
+class LabeledTrackSerializer
+	variable shapes
+	variable attributes
+class LabeledDataSerializer
+	variable version
+	variable tags
+	variable shapes
+	variable tracks
+class FileInfoSerializer
+	variable name
+	variable type
+class LogEventSerializer
+	variable job_id
+	variable task_id
+	variable proj_id
+	variable client_id
+	variable name
+	variable time
+	variable message
+	variable payload
+	variable is_active
+class AnnotationFileSerializer
+	variable annotation_file
+class TaskFileSerializer
+	variable task_file
+class ReviewSerializer
+	variable assignee
+	variable assignee_id
+	variable reviewer
+	variable reviewer_id
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+		variable write_once_fields
+		variable ordering
+class IssueSerializer
+	variable owner
+	variable owner_id
+	variable resolver
+	variable resolver_id
+	variable position
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+		variable write_once_fields
+		variable ordering
+class CommentSerializer
+	variable author
+	variable author_id
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+		variable write_once_fields
+class CombinedIssueSerializer
+	variable comment_set
+class CombinedReviewSerializer
+	variable issue_set
+	method create
+		variable validated_data
+		variable issues_validated_data
+		variable db_review
+		variable issue
+		variable comments_validated_data
+		variable db_issue
+		variable comment
+class ManifestSerializer
+	class Meta
+		variable model
+		variable fields
+	method to_internal_value
+		variable data
+	method to_representation
+		variable instance
+class BaseCloudStorageSerializer
+	variable owner
+	variable manifests
+	class Meta
+		variable model
+		variable exclude
+		variable read_only_fields
+class CloudStorageSerializer
+	variable owner
+	variable session_token
+	variable key
+	variable secret_key
+	variable key_file_path
+	variable account_name
+	variable manifests
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields
+	method validate_specific_attributes
+		variable value
+		variable attributes
+		variable attribute
+	method validate
+		variable attrs
+	method create
+		variable validated_data
+		variable provider_type
+		variable should_be_created
+		variable credentials
+		variable details
+		variable storage
+		variable ex
+		variable storage_status
+		variable manifests
+		variable manifest
+		variable file_status
+		variable db_storage
+		variable manifest_file_instances
+		variable cloud_storage_path
+		variable field
+		variable message
+	method update
+		variable instance
+		variable validated_data
+		variable credentials
+		variable tmp
+		variable details
+		variable storage
+		variable storage_status
+		variable new_manifest_names
+		variable previos_manifest_names
+		variable delta_to_delete
+		variable delta_to_create
+		variable manifest
+		variable file_status
+		variable manifest_instances
+		variable field
+		variable message
+class RelatedFileSerializer
+	class Meta
+		variable model
+		variable fields
+		variable read_only_fields

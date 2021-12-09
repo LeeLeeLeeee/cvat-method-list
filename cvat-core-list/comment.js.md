@@ -1,0 +1,40 @@
+comment.js.md
+variable User
+variable ArgumentError
+variable negativeIDGenerator
+class Comment
+	constructor constructor
+		property __internal
+			method get
+		property author
+			method get
+		property createdDate
+			method get
+		variable data
+			property author
+			property created_date
+			property id
+			property message
+			property removed
+			property updated_date
+		property id
+			method get
+		property message
+			method get
+			method set
+		variable property
+		property removed
+			method get
+			method set
+		property updatedDate
+			method get
+	method serialize
+		variable data
+			property message
+	method toJSON
+		property updated
+		variable author
+		property author_id
+		variable data
+		variable updated
+variable <unknown>

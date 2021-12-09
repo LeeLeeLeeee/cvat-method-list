@@ -1,0 +1,53 @@
+annotation-formats.js.md
+function <function>
+	variable <unknown>
+		property AnnotationFormats
+		property Dumper
+		property Loader
+	class AnnotationFormats
+		constructor constructor
+			variable data
+				property exporters
+					function initialData.exporters.map() callback
+				property importers
+					function initialData.importers.map() callback
+			property dumpers
+				method get
+			property loaders
+				method get
+	class Dumper
+		constructor constructor
+			variable data
+				property dimension
+				property enabled
+				property format
+				property name
+				property version
+			property dimension
+				method get
+			property enabled
+				method get
+			property format
+				method get
+			property name
+				method get
+			property version
+				method get
+	class Loader
+		constructor constructor
+			variable data
+				property dimension
+				property enabled
+				property format
+				property name
+				property version
+			property dimension
+				method get
+			property enabled
+				method get
+			property format
+				method get
+			property name
+				method get
+			property version
+				method get

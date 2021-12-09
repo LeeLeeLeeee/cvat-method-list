@@ -1,0 +1,36 @@
+project.py.md
+function export_project
+	variable project_id
+	variable dst_file
+	variable format_name
+	variable server_url
+	variable save_images
+	variable project
+	variable exporter
+	variable f
+class ProjectAnnotation
+	method __init__
+		variable pk
+	method reset
+		variable annotation_ir
+	method put
+		variable data
+	method create
+		variable data
+	method update
+		variable data
+	method delete
+		variable data
+	method init_from_db
+		variable task
+		variable annotation
+	method export
+		variable dst_file
+		variable exporter
+		variable host
+		variable options
+		variable project_data
+	method data
+	variable db_project
+	variable db_tasks
+	variable annotation_irs

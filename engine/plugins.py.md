@@ -1,0 +1,19 @@
+plugins.py.md
+variable __plugins
+function add_plugin
+	variable name
+	variable function
+	variable order
+	variable exc_ok
+function remove_plugin
+	variable name
+	variable function
+function plugin_decorator
+	variable function_to_decorate
+	variable name
+	function function_wrapper
+		variable args
+		variable kwargs
+		variable wrapper
+		variable ex
+		variable result

@@ -1,0 +1,26 @@
+tests.py.md
+class UserAgreementsTest
+	method setUp
+	method tearDown
+	method _get_user_agreements
+		variable response
+		variable agreements
+	method _register_user
+		variable data
+		variable response
+	method test_user_agreements
+	method test_register_user_with_required_confirmations
+		variable agreements
+		variable data
+		variable agreement
+		variable response
+	method test_register_user_without_confirmations
+		variable data
+		variable response
+	method test_register_user_with_all_confirmations
+		variable agreements
+		variable data
+		variable agreement
+		variable response
+	variable client
+	variable user_agreements

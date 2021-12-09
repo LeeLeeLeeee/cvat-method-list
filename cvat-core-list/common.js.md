@@ -1,0 +1,41 @@
+common.js.md
+function <function>
+	variable <unknown>
+		property camelToSnake
+		property checkExclusiveFields
+		property checkFilter
+		property checkObjectType
+		property FieldUpdateTrigger
+		property isBoolean
+		property isEnum
+		property isInteger
+		property isString
+		property negativeIDGenerator
+	variable ArgumentError
+	function camelToSnake
+		function replace() callback
+	function checkExclusiveFields
+		variable field
+		variable fields
+			property exclusive
+			property other
+	function checkFilter
+		variable prop
+	function checkObjectType
+	class FieldUpdateTrigger
+		constructor constructor
+			property <unknown>
+			variable data
+				property initialFields
+			property reset
+				method value
+					function forEach() callback
+	function isBoolean
+	function isEnum
+		variable key
+	function isInteger
+	function isString
+	class negativeIDGenerator
+		constructor constructor
+			variable value
+		variable start

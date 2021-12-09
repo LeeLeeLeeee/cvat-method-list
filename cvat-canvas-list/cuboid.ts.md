@@ -1,0 +1,199 @@
+cuboid.ts.md
+enum Orientation
+	variable LEFT
+	variable RIGHT
+function line
+	variable a
+	variable b
+	variable c
+function intersection
+	variable D
+	variable Dx
+	variable Dy
+	variable L1
+	variable L2
+	variable x
+	property x
+	variable y
+	property y
+class Equation
+	constructor constructor
+	property a
+	property b
+	property c
+	method getY
+class Figure
+	constructor constructor
+	property allPoints
+	property indices
+	property (get) points
+		variable index
+		variable points
+	property (set) points
+		variable i
+		variable oldPoints
+		property x
+		property y
+class Edge
+	method getEquation
+class CuboidModel
+	constructor constructor
+	property bot
+	method buildBackEdge
+		variable botIndex
+		variable leftPoints
+		variable p1
+		variable p2
+		variable rightPoints
+		variable topIndex
+		variable vpLeft
+		variable vpRight
+		property x
+		property x
+		property x
+		property x
+		property y
+		property y
+		property y
+		property y
+	method computeSideEdgeConstraints
+		property constraint
+			property maxY
+			property minY
+		variable maxY
+		variable maxy1
+		variable maxy2
+		variable midLength
+		variable minY
+		variable miny1
+		variable miny2
+		variable y1
+		property y1Range
+			property max
+			property min
+		variable y2
+		property y2Range
+			property max
+			property min
+	property db
+	property dl
+	property dorsal
+	property dr
+	property dt
+	property edgeList
+	property facesList
+	property fb
+	property fl
+	property fr
+	property front
+	property ft
+	method getPoints
+	method initEdges
+	method initFaces
+	property lb
+	property left
+	property lt
+	property orientation
+	property points
+	property rb
+	property right
+	property rt
+	method setPoints
+		function points.forEach() callback
+	property top
+	method updateOrientation
+	method updatePoints
+	method updateVanishingPoints
+		variable leftEdge
+		variable midEdge
+		variable rightEdge
+	property vpl
+	property vpr
+function sortPointsClockwise
+	variable center
+		property x
+		property y
+	variable cx
+	variable cy
+	function points.forEach() callback
+		variable ang
+	function points.sort() callback
+	function points.sort() callback
+	function points.sort() callback
+	variable startAng
+function setupCuboidPoints
+	variable height
+	variable left
+	variable left2
+	variable p1
+	variable p2
+	variable p3
+	variable p4
+	variable p5
+		property x
+		property y
+	variable p6
+		property x
+		property y
+	variable p7
+		property x
+		property y
+	variable p8
+		property x
+		property y
+	variable right
+	variable right2
+	variable vec
+		property x
+		property y
+	property x
+	property x
+	property x
+	property x
+	property y
+	property y
+	property y
+	property y
+function cuboidFrom4Points
+	variable angle
+	variable cuboidPoints
+	function cuboidPoints.reduce() callback
+	variable i
+	variable i
+	variable leftIndex
+	variable plane1
+		property p1
+		property p2
+		property p3
+		property p4
+	variable plane2
+		property p1
+		property p2
+		property p3
+		property p4
+	variable points
+	function rotate
+		variable t
+		variable temp
+	variable sortedPlanePoints
+	variable unsortedPlanePoints
+	variable vec
+		property x
+		property y
+	variable vector
+		property x
+		property y
+	variable x
+	property x
+	property x
+	property x
+	property x
+	property x
+	property x
+	variable y
+	property y
+	property y
+	property y
+	property y
+	property y
+	property y

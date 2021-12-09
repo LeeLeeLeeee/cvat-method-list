@@ -1,0 +1,58 @@
+canvas.ts.md
+variable CanvasVersion
+interface Canvas
+	method activate
+	method bitmap
+	method cancel
+	method configure
+	method dragCanvas
+	method draw
+	method fit
+	method fitCanvas
+	method focus
+	property geometry
+	method grid
+	method group
+	method html
+	method interact
+	method isAbleToChangeFrame
+	method merge
+	method mode
+	method rotate
+	method select
+	method selectRegion
+	method setup
+	method setupIssueRegions
+	method split
+	method zoomCanvas
+class CanvasImpl
+	constructor constructor
+	method activate
+	method bitmap
+	method cancel
+	method configure
+	property controller
+	method dragCanvas
+	method draw
+	method fit
+	method fitCanvas
+	method focus
+	property (get) geometry
+	method grid
+	method group
+	method html
+	method interact
+	method isAbleToChangeFrame
+	method merge
+	method mode
+	property model
+	method rotate
+	method select
+	method selectRegion
+	method setup
+	method setupIssueRegions
+	method split
+	property view
+	method zoomCanvas
+variable InteractionData
+variable InteractionResult

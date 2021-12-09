@@ -1,0 +1,102 @@
+annotations-saver.js.md
+function <function>
+	variable <unknown>
+	class AnnotationsSaver
+		constructor constructor
+			variable exported
+			variable shape
+			variable tag
+			variable track
+		method _create
+			variable result
+		method _delete
+			variable result
+		method _getHash
+			variable exported
+		method _put
+			variable result
+		method _receiveIndexes
+			variable indexes
+				property shapes
+					function exported.shapes.map() callback
+				property tags
+					function exported.tags.map() callback
+				property tracks
+					function exported.tracks.map() callback
+			function map() callback
+		method _request
+			variable result
+		method _resetState
+			property shapes
+			property tags
+			property tracks
+		method _split
+			variable exportedHash
+			variable id
+			variable indexes
+				property shapes
+					function exported.shapes.map() callback
+				property tags
+					function exported.tags.map() callback
+				property tracks
+					function exported.tracks.map() callback
+			variable initialHash
+			variable keys
+			variable object
+			variable object
+			variable splitted
+				property created
+					property shapes
+					property tags
+					property tracks
+				property deleted
+					property shapes
+					property tags
+					property tracks
+				property updated
+					property shapes
+					property tags
+					property tracks
+			variable type
+			variable type
+		method _update
+			variable result
+		method _updateCreatedObjects
+			variable clientID
+			variable i
+			variable indexesLength
+			variable savedLength
+			variable type
+		method hasUnsavedChanges
+		method save
+			variable created
+			variable createdData
+				property created
+				property version
+			variable deleted
+			variable deletedData
+				property deleted
+				property version
+			variable exported
+			variable flush
+			variable indexes
+			variable indexes
+			variable object
+			variable object
+			variable object
+			variable object
+			function onUpdate
+			variable savedData
+				property exported
+				property version
+			variable type
+			variable type
+			variable type
+			variable type
+			variable updated
+			variable updatedData
+				property updated
+				property version
+	variable ScriptingError
+	variable serverProxy
+	variable Task

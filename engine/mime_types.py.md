@@ -1,0 +1,3 @@
+mime_types.py.md
+constant _SCRIPT_DIR
+constant MEDIA_MIMETYPES_FILES

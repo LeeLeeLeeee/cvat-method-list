@@ -1,0 +1,355 @@
+models.py.md
+class SafeCharField
+	method get_prep_value
+		variable value
+class DimensionType
+	constant DIM_3D
+	constant DIM_2D
+	method choices
+	method __str__
+class StatusChoice
+	constant ANNOTATION
+	constant VALIDATION
+	constant COMPLETED
+	method choices
+	method __str__
+class DataChoice
+	constant VIDEO
+	constant IMAGESET
+	constant LIST
+	method choices
+	method __str__
+class StorageMethodChoice
+	constant CACHE
+	constant FILE_SYSTEM
+	method choices
+	method __str__
+class StorageChoice
+	constant CLOUD_STORAGE
+	constant LOCAL
+	constant SHARE
+	method choices
+	method __str__
+class Data
+	variable chunk_size
+	variable size
+	variable image_quality
+	variable start_frame
+	variable stop_frame
+	variable frame_filter
+	variable compressed_chunk_type
+	variable original_chunk_type
+	variable storage_method
+	variable storage
+	variable cloud_storage
+	class Meta
+		variable default_permissions
+	method get_frame_step
+		variable match
+	method get_data_dirname
+	method get_upload_dirname
+	method get_compressed_cache_dirname
+	method get_original_cache_dirname
+	method _get_chunk_name
+		variable chunk_number
+		variable chunk_type
+		variable ext
+	method _get_compressed_chunk_name
+		variable chunk_number
+	method _get_original_chunk_name
+		variable chunk_number
+	method get_original_chunk_path
+		variable chunk_number
+	method get_compressed_chunk_path
+		variable chunk_number
+	method get_preview_path
+	method get_manifest_path
+	method get_index_path
+class Video
+	variable data
+	variable path
+	variable width
+	variable height
+	class Meta
+		variable default_permissions
+class Image
+	variable data
+	variable path
+	variable frame
+	variable width
+	variable height
+	class Meta
+		variable default_permissions
+class TrainingProject
+	class ProjectClass
+		constant DETECTION
+	variable host
+	variable username
+	variable password
+	variable training_id
+	variable enabled
+	variable project_class
+class Project
+	variable name
+	variable owner
+	variable assignee
+	variable bug_tracker
+	variable created_date
+	variable updated_date
+	variable status
+	variable training_project
+	method get_project_dirname
+	method get_project_logs_dirname
+	method get_client_log_path
+	method get_log_path
+	class Meta
+		variable default_permissions
+	method __str__
+class Task
+	variable project
+	variable name
+	variable mode
+	variable owner
+	variable assignee
+	variable bug_tracker
+	variable created_date
+	variable updated_date
+	variable overlap
+	variable segment_size
+	variable status
+	variable data
+	variable dimension
+	variable subset
+	class Meta
+		variable default_permissions
+	method get_task_dirname
+	method get_task_logs_dirname
+	method get_client_log_path
+	method get_log_path
+	method get_task_artifacts_dirname
+	method __str__
+class TrainingProjectImage
+	variable task
+	variable idx
+	variable training_image_id
+class MyFileSystemStorage
+	method get_valid_name
+		variable name
+	method get_available_name
+		variable name
+		variable max_length
+function upload_path_handler
+	variable instance
+	variable filename
+class ClientFile
+	variable data
+	variable file
+	class Meta
+		variable default_permissions
+		variable unique_together
+class ServerFile
+	variable data
+	variable file
+	class Meta
+		variable default_permissions
+class RemoteFile
+	variable data
+	variable file
+	class Meta
+		variable default_permissions
+class RelatedFile
+	variable data
+	variable path
+	variable primary_image
+	class Meta
+		variable default_permissions
+		variable unique_together
+class Segment
+	variable task
+	variable start_frame
+	variable stop_frame
+	class Meta
+		variable default_permissions
+class Job
+	variable segment
+	variable assignee
+	variable reviewer
+	variable status
+	class Meta
+		variable default_permissions
+class Label
+	variable task
+	variable project
+	variable name
+	variable color
+	method __str__
+	class Meta
+		variable default_permissions
+		variable unique_together
+class TrainingProjectLabel
+	variable cvat_label
+	variable training_label_id
+class AttributeType
+	constant CHECKBOX
+	constant RADIO
+	constant NUMBER
+	constant TEXT
+	constant SELECT
+	method choices
+	method __str__
+class AttributeSpec
+	variable label
+	variable name
+	variable mutable
+	variable input_type
+	variable default_value
+	variable values
+	class Meta
+		variable default_permissions
+		variable unique_together
+	method __str__
+class AttributeVal
+	variable id
+	variable spec
+	variable value
+	class Meta
+		variable abstract
+		variable default_permissions
+class ShapeType
+	constant RECTANGLE
+	constant POLYGON
+	constant POLYLINE
+	constant POINTS
+	constant CUBOID
+	method choices
+	method __str__
+class SourceType
+	constant AUTO
+	constant MANUAL
+	method choices
+	method __str__
+class ReviewStatus
+	constant ACCEPTED
+	constant REJECTED
+	constant REVIEW_FURTHER
+	method choices
+	method __str__
+class Annotation
+	variable id
+	variable job
+	variable label
+	variable frame
+	variable group
+	variable source
+	class Meta
+		variable abstract
+		variable default_permissions
+class Commit
+	variable id
+	variable author
+	variable version
+	variable timestamp
+	variable message
+	class Meta
+		variable abstract
+		variable default_permissions
+class JobCommit
+	variable job
+class FloatArrayField
+	variable separator
+	method from_db_value
+		variable value
+		variable expression
+		variable connection
+	method to_python
+		variable value
+	method get_prep_value
+		variable value
+class Shape
+	variable type
+	variable occluded
+	variable z_order
+	variable points
+	class Meta
+		variable abstract
+		variable default_permissions
+class LabeledImage
+class LabeledImageAttributeVal
+	variable image
+class LabeledShape
+class LabeledShapeAttributeVal
+	variable shape
+class LabeledTrack
+class LabeledTrackAttributeVal
+	variable track
+class TrackedShape
+	variable id
+	variable track
+	variable frame
+	variable outside
+class TrackedShapeAttributeVal
+	variable shape
+class Profile
+	variable user
+	variable rating
+class Review
+	variable job
+	variable reviewer
+	variable assignee
+	variable estimated_quality
+	variable status
+class Issue
+	variable frame
+	variable position
+	variable job
+	variable review
+	variable owner
+	variable resolver
+	variable created_date
+	variable resolved_date
+class Comment
+	variable issue
+	variable author
+	variable message
+	variable created_date
+	variable updated_date
+class CloudProviderChoice
+	constant AWS_S3
+	constant AZURE_CONTAINER
+	constant GOOGLE_DRIVE
+	constant GOOGLE_CLOUD_STORAGE
+	method choices
+	method list
+	method __str__
+class CredentialsTypeChoice
+	constant KEY_SECRET_KEY_PAIR
+	constant ACCOUNT_NAME_TOKEN_PAIR
+	constant KEY_FILE_PATH
+	constant ANONYMOUS_ACCESS
+	method choices
+	method list
+	method __str__
+class Manifest
+	variable filename
+	variable cloud_storage
+	method __str__
+class CloudStorage
+	variable provider_type
+	variable resource
+	variable display_name
+	variable owner
+	variable created_date
+	variable updated_date
+	variable credentials
+	variable credentials_type
+	variable specific_attributes
+	variable description
+	class Meta
+		variable default_permissions
+		variable unique_together
+	method __str__
+	method get_storage_dirname
+	method get_storage_logs_dirname
+	method get_log_path
+	method get_preview_path
+	method get_specific_attributes
